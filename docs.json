@@ -25,8 +25,8 @@
           {
             "group": "Overview",
             "pages": [
-              "index",
-              "quickstart"
+              "en/index",
+              "en/quickstart"
             ]
           }
         ]
@@ -37,9 +37,9 @@
           {
             "group": "Core Platform",
             "pages": [
-              "dark-factory",
-              "node-system",
-              "workflows"
+              "en/dark-factory",
+              "en/node-system",
+              "en/workflows"
             ]
           }
         ]
@@ -50,7 +50,7 @@
           {
             "group": "Pricing",
             "pages": [
-              "plans-overview"
+              "en/plans-overview"
             ]
           }
         ]
