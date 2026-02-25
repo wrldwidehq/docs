@@ -1,44 +1,65 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "WRLDWIDE AI",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#7c5cfc",
+    "light": "#a78bfa",
+    "dark": "#6a4ce8"
   },
   "favicon": "/favicon.svg",
+  "background": {
+    "color": {
+      "dark": "#0c0c14",
+      "light": "#fafafa"
+    }
+  },
+  "appearance": {
+    "default": "dark"
+  },
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Getting Started",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Overview",
             "pages": [
               "index",
-              "quickstart",
-              "development"
+              "quickstart"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "Platform",
+        "groups": [
           {
-            "group": "Customization",
+            "group": "Core Platform",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "dark-factory",
+              "node-system",
+              "workflows"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "Plans & Pricing",
+        "groups": [
           {
-            "group": "Writing content",
+            "group": "Pricing",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "plans-overview"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "AI Tools",
+        "groups": [
           {
-            "group": "AI tools",
+            "group": "Development",
             "pages": [
               "ai-tools/cursor",
               "ai-tools/claude-code",
@@ -48,7 +69,7 @@
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "API Reference",
         "groups": [
           {
             "group": "API documentation",
@@ -71,52 +92,51 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Dashboard",
+          "href": "https://app.wrldwide.ai/dashboard",
+          "icon": "gauge-high"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Platform",
+          "href": "https://wrldwide.ai",
+          "icon": "rocket"
         }
       ]
     }
   },
   "logo": {
     "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "dark": "/logo/dark.svg",
+    "href": "https://wrldwide.ai"
   },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@wrldwide.ai"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Get Started",
+      "href": "https://app.wrldwide.ai/signup"
+    }
+  },
+  "footer": {
+    "socials": {
+      "x": "https://twitter.com/wrldwide_ai",
+      "instagram": "https://instagram.com/wrldwide.ai"
     }
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "cursor",
+      "vscode"
+    ]
   }
 }

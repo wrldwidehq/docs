@@ -1,0 +1,369 @@
+---
+title: "Node System"
+description: "Build complex AI workflows with visual drag-and-drop interface."
+icon: "diagram-project"
+---
+
+# Node System
+
+Build complex AI workflows with a visual drag-and-drop interface. Chain together 36 node types to create custom pipelines, automate repetitive tasks, and save workflows as templates.
+
+**Access:** [app.wrldwide.ai/nodes](https://app.wrldwide.ai/nodes)
+
+---
+
+## Overview
+
+The Node System is a visual workflow builder that lets you:
+
+- **Chain AI Operations** — Connect image generation, video, upscaling, editing in sequence
+- **Batch Processing** — Run workflows on multiple inputs simultaneously
+- **Conditional Logic** — Use If/Else nodes for branching workflows
+- **Save Templates** — Reuse successful workflows
+- **Share Workflows** — Publish to Marketplace
+- **Automate** — Schedule workflows with Cron nodes
+
+---
+
+## What Are Nodes?
+
+Nodes are the building blocks of workflows. Each node performs a specific function — from generating an image to removing a background to upscaling a video. You connect nodes by dragging from an output port to an input port, creating a data flow that defines your pipeline.
+
+**Key concepts:**
+- **Nodes** — Individual processing units (36 types available)
+- **Ports** — Input (left) and output (right) connection points
+- **Edges** — Connections between nodes that define data flow
+- **Canvas** — The workspace where you build workflows
+- **Workspace** — A saved workflow project
+
+---
+
+## Available Node Types (36 Total)
+
+### Input Nodes (7)
+
+| Node | Description |
+|------|-------------|
+| **Prompt Node** | Text prompts for generation |
+| **Image Upload Node** | Upload images as input |
+| **Video Upload Node** | Upload videos as input |
+| **Audio Upload Node** | Upload audio files |
+| **Number Node** | Numeric parameters |
+| **Style Node** | Visual style selection |
+| **File Upload Node** | General file uploads |
+
+---
+
+### Processing Nodes — Image (7)
+
+| Node | Description | Credits |
+|------|-------------|---------|
+| **Model Node** | Generate images with 19 image models | 1–4 |
+| **Edit Image Node** | Inpainting with Flux Kontext | 2–4 |
+| **Upscale Node** | 4x upscaling (Recraft or Topaz) | 1–3 |
+| **Remove Background Node** | Background removal | 1 |
+| **Style Transfer Node** | Apply 160+ visual styles | 3 |
+| **Relight Node** | AI product relighting with studio controls | 3 |
+| **Inpainting Node** | Advanced inpainting/outpainting | 2–4 |
+
+---
+
+### Processing Nodes — Video (8)
+
+| Node | Description | Credits |
+|------|-------------|---------|
+| **Video Generate Node** | 45+ video model variants | 8–24 |
+| **Video Upscale Node** | Upscale video resolution | 5–10 |
+| **Cinema Studio Node** | Professional camera controls | 8–24 |
+| **Motion Control Node** | Transfer motion from video | 10 |
+| **Face Swap Node** | Face replacement | 5 (image) / 15 (video) |
+| **Lip Sync Node** | Voice synchronization | 8–12 |
+| **Live Avatar Node** | Talking avatars | 8–20 |
+| **Video Compositor Node** | Combine multiple video clips | 5 |
+
+---
+
+### Processing Nodes — 3D & Advanced
+
+| Node | Description | Credits |
+|------|-------------|---------|
+| **Image 3D Node** | Image-to-3D conversion | 15–30 |
+| **Speed Ramp Node** | Dynamic speed changes | 5 |
+
+---
+
+### AI & Logic Nodes (7)
+
+| Node | Description |
+|------|-------------|
+| **Assistant Node** | AI chat for prompts and analysis |
+| **Translate Node** | Multi-language translation |
+| **Filter Node** | Filter results by criteria |
+| **Merge Node** | Combine multiple outputs |
+| **Script Generator Node** | AI-written video scripts |
+| **Voice Generation Node** | AI voiceover with ElevenLabs |
+| **TikTok Scraper Node** | Pull trending TikTok content |
+
+---
+
+### Utility & Logic Nodes (5)
+
+| Node | Description |
+|------|-------------|
+| **If/Else Node** | Conditional branching |
+| **Aspect Ratio Node** | Adjust dimensions |
+| **List Node** | Batch processing multiple items |
+| **Social Share Node** | Share to platforms |
+| **Cron Schedule Node** | Automate workflows |
+
+---
+
+### Batch & UGC Nodes
+
+| Node | Description |
+|------|-------------|
+| **Bulk UGC Node** | Generate UGC ads at scale |
+| **Performance Tracker Node** | Track asset performance metrics |
+| **Product Scorer Node** | AI scoring of product content quality |
+
+---
+
+## How to Build a Workflow
+
+<Steps>
+  <Step title="Create Workspace">
+    Go to [app.wrldwide.ai/nodes](https://app.wrldwide.ai/nodes) and click **+ New Workspace**
+  </Step>
+  <Step title="Add Nodes">
+    Drag nodes from the sidebar into the canvas:
+    - Click category to expand (Input, Processing, Logic)
+    - Drag node onto canvas
+    - Repeat for all nodes needed
+  </Step>
+  <Step title="Connect Nodes">
+    Connect nodes by dragging from output to input:
+    - Click and drag from output port (right side)
+    - Drop onto input port (left side)
+    - Lines show data flow
+  </Step>
+  <Step title="Configure Nodes">
+    Click each node to configure:
+    - Enter prompts, select models, adjust parameters
+    - Required fields marked with *
+  </Step>
+  <Step title="Run Workflow">
+    Click **Run Workflow** to execute
+    - Nodes execute in order
+    - View progress in real-time
+    - Results appear in output nodes
+  </Step>
+  <Step title="Save Template">
+    Click **Save** to reuse workflow later
+    - Name your workflow
+    - Add description
+    - Optionally publish to Marketplace
+  </Step>
+</Steps>
+
+---
+
+## Example Workflows
+
+### Basic: Generate + Upscale
+
+```
+[Prompt Node] → [Model Node] → [Upscale Node] → [Output]
+```
+
+**Use Case:** Generate images at 2K, upscale to 4K
+
+---
+
+### Product Video Pipeline
+
+```
+[Image Upload] → [Remove Background] → [Video Generate] → [Output]
+```
+
+**Use Case:** Convert product photos to clean videos
+
+---
+
+### Batch Processing
+
+```
+[List Node (10 prompts)] → [Model Node] → [Upscale] → [Bulk Export]
+```
+
+**Use Case:** Generate and upscale 10 images in parallel
+
+---
+
+### Conditional Workflow
+
+```
+[Image Upload] → [If/Else: Contains Person?]
+               → YES → [Face Swap]
+               → NO → [Background Removal]
+               → [Merge] → [Export]
+```
+
+**Use Case:** Different processing based on image content
+
+---
+
+### Automated Content Creation
+
+```
+[Cron Schedule (Daily 9am)] → [Prompt Node] → [Model Node] → [Social Share]
+```
+
+**Use Case:** Automatically generate and post daily content
+
+---
+
+## Advanced Features
+
+### Batch Processing with List Node
+
+The **List Node** lets you process multiple items in parallel:
+
+**Example:**
+```
+[List Node]
+  - Input 1: "Red car"
+  - Input 2: "Blue house"
+  - Input 3: "Green tree"
+  ↓
+[Model Node] → Generates 3 images in parallel
+```
+
+**Benefits:**
+- Faster than sequential processing
+- More cost-efficient for bulk jobs
+- Single credit charge for the batch
+
+---
+
+### Cron Scheduling
+
+Automate workflows on schedule:
+
+- **Daily:** Generate content every day at 9am
+- **Weekly:** Create weekly summary videos
+- **Hourly:** Monitor and process new uploads
+- **Custom:** Any cron expression
+
+**Example:**
+```
+[Cron Schedule: 0 9 * * *] → [Workflow]
+```
+(Runs daily at 9:00 AM)
+
+---
+
+### Conditional Logic with If/Else
+
+Branch workflows based on conditions:
+
+**Example:**
+```
+[Image Upload]
+  ↓
+[If/Else: Image contains face?]
+  ├─ YES → [Face Swap Node]
+  └─ NO → [Background Removal Node]
+  ↓
+[Merge]
+  ↓
+[Export]
+```
+
+---
+
+## Marketplace
+
+Browse and use 60+ community templates:
+
+- **Product Photography** — E-commerce workflows
+- **Social Content** — Automated social media creation
+- **Video Production** — Complex video pipelines
+- **Batch Processing** — Mass production workflows
+- **Creative Tools** — Artistic and experimental workflows
+
+**Access:** [app.wrldwide.ai/marketplace](https://app.wrldwide.ai/marketplace)
+
+---
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Start Simple">
+    - Begin with 2-3 nodes
+    - Test workflow before adding complexity
+    - Add nodes gradually
+    - Save working versions as you build
+  </Accordion>
+
+  <Accordion title="Test Each Node">
+    - Test nodes individually before chaining
+    - Click node → Run to test in isolation
+    - Verify outputs before connecting to next node
+  </Accordion>
+
+  <Accordion title="Use Descriptive Names">
+    - Name workflows clearly: "Product Photo to Video"
+    - Add descriptions for future reference
+    - Comment complex logic
+  </Accordion>
+
+  <Accordion title="Optimize for Cost">
+    - Use List Node for batch processing (more efficient)
+    - Choose appropriate models (don't overpay for quality you don't need)
+    - Test with single items before batch processing
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Workflow won't run">
+    - Check all required fields are filled (marked with *)
+    - Verify all nodes are connected properly
+    - Check for circular dependencies
+    - Review error messages in console
+  </Accordion>
+
+  <Accordion title="Node connection fails">
+    - Check input/output types match
+    - Some nodes only accept specific data types
+    - Read node documentation for compatibility
+  </Accordion>
+
+  <Accordion title="Slow execution">
+    - Large batch operations take time
+    - Some models are slower than others
+    - Check if nodes are running in parallel or sequence
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Dark Factory" icon="factory" href="/dark-factory">
+    Pre-built content pipeline for product photos and videos
+  </Card>
+  <Card title="Workflows" icon="arrows-split-up-and-left" href="/workflows">
+    Learn workflow building patterns and techniques
+  </Card>
+  <Card title="Plans & Pricing" icon="credit-card" href="/plans-overview">
+    Credit allocations by plan tier
+  </Card>
+  <Card title="Quick Start" icon="rocket" href="/quickstart">
+    Create your first workflow
+  </Card>
+</CardGroup>
