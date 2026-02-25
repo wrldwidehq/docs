@@ -42,3 +42,4 @@ Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/sett
 ### Resources
 - [Mintlify documentation](https://mintlify.com/docs)
 # Last updated: Wed Feb 25 19:04:44 CST 2026
+# Deployment trigger: Wed Feb 25 19:14:12 CST 2026
