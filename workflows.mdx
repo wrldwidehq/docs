@@ -1,0 +1,316 @@
+---
+title: "Workflows"
+description: "Build, run, and automate content workflows with visual pipelines."
+icon: "arrows-split-up-and-left"
+---
+
+# Workflows
+
+Workflows are the foundation of WRLDWIDE AI. They let you chain AI operations, process content at scale, and automate repetitive tasks — all through a visual interface.
+
+The platform supports two workflow modes: **Dark Factory** for pre-built content pipelines, and the **Node System** for custom workflows.
+
+---
+
+## Workflow Types
+
+### Dark Factory Workflows
+
+Pre-built pipelines optimized for e-commerce content production. Upload a product image and generate a complete content suite automatically.
+
+- Product photography and videos
+- UGC-style ads
+- Social media kits
+- Brand assets
+
+**Best for:** E-commerce brands launching products, creating ad creatives, and scaling content production.
+
+**Access:** [Dark Factory](/dark-factory)
+
+---
+
+### Node System Workflows
+
+Build custom workflows from scratch using 36 node types. Chain AI operations, add conditional logic, and create reusable templates.
+
+- Custom image and video pipelines
+- Batch processing
+- Conditional branching
+- Scheduled automation
+
+**Best for:** Power users building custom pipelines, agencies with specific workflows, and automation scenarios.
+
+**Access:** [Node System](/node-system)
+
+---
+
+## Workflow Lifecycle
+
+1. **Create** — Build or select a workflow
+2. **Configure** — Set parameters, inputs, and options
+3. **Validate** — Check for errors and missing required fields
+4. **Execute** — Run the workflow and monitor progress
+5. **Review** — View, download, and share results
+6. **Iterate** — Save as template or re-run with modifications
+
+---
+
+## Building Workflows
+
+### Starting Points
+
+<CardGroup cols={3}>
+  <Card title="From Scratch">
+    Start with an empty canvas. Add nodes, connect them, and configure each step manually.
+  </Card>
+  <Card title="From Template">
+    Browse 60+ marketplace templates. Clone and customize for your needs.
+  </Card>
+  <Card title="From Recipe">
+    Use Dark Factory recipes. Pre-configured service combinations for common use cases.
+  </Card>
+</CardGroup>
+
+### Workflow Components
+
+| Component | Purpose | Example |
+|-----------|---------|---------|
+| **Inputs** | Starting data | Product image, text prompt, video file |
+| **Processors** | Transform data | Generate image, remove background, upscale |
+| **Logic** | Control flow | If/else conditions, filters, merges |
+| **Outputs** | Final results | Downloadable assets, shared posts, scheduled jobs |
+
+---
+
+## Running Workflows
+
+### Execution Modes
+
+**Single Run**
+- Process one input through the workflow
+- Best for testing and one-off content
+- Results appear immediately
+
+**Batch Run**
+- Process multiple inputs simultaneously
+- Uses List Node or Dark Factory batch mode
+- More efficient credit usage
+- Progress tracked per item
+
+### Credit Deduction
+
+Credits are deducted as each node executes:
+
+- **Image generation:** 1–4 credits per image
+- **Video generation:** 8–24 credits per video
+- **Processing:** 1–5 credits per operation
+- **Logic nodes:** Free
+
+**Credit calculation:** The workflow shows estimated credits before you run.
+
+### Execution Status
+
+| Status | Meaning |
+|--------|---------|
+| **Queued** | Waiting for resources |
+| **Running** | Currently processing |
+| **Complete** | Finished successfully |
+| **Failed** | Error occurred |
+| **Cancelled** | User stopped execution |
+
+---
+
+## Automation
+
+### Cron Scheduling
+
+Schedule workflows to run automatically:
+
+```
+[Cron Schedule Node] → [Your Workflow] → [Output/Share]
+```
+
+**Common patterns:**
+- Daily content generation (0 9 * * *)
+- Weekly reports (0 9 * * 1)
+- Hourly monitoring (0 * * * *)
+
+**Access:** Add a Cron Schedule Node to any workflow, or use the Schedule tab in Dark Factory.
+
+### Triggers
+
+Future capability (on roadmap): React to events
+- New product added to Shopify
+- Trending content detected
+- Competitor ad spotted
+
+---
+
+## Workflow Patterns
+
+### Pattern: Generate + Enhance
+
+```
+[Prompt] → [Generate Image] → [Upscale] → [Export]
+```
+
+**Use case:** Create high-quality product images at 4K resolution.
+
+---
+
+### Pattern: Batch Process
+
+```
+[List (10 files)] → [Process] → [Export All]
+```
+
+**Use case:** Process an entire product catalog automatically.
+
+---
+
+### Pattern: Conditional Route
+
+```
+[Input] → [If/Else: Is video?]
+        → YES → [Video Processing]
+        → NO → [Image Processing]
+        → [Merge] → [Export]
+```
+
+**Use case:** Handle mixed media inputs with different processing paths.
+
+---
+
+### Pattern: Scheduled Content
+
+```
+[Cron: Daily 9am] → [Generate Post] → [Social Share]
+```
+
+**Use case:** Auto-generate and post daily social content.
+
+---
+
+## Managing Workflows
+
+### Workspaces
+
+Save workflows as named workspaces:
+- Auto-saved drafts
+- Named templates
+- Shared team workflows
+- Marketplace submissions
+
+### Templates
+
+Save successful workflows as templates:
+- Name and description
+- Default parameters
+- Thumbnail preview
+- Privacy (private, team, public)
+
+### Versioning
+
+Track changes to workflows:
+- Save versions at milestones
+- Compare versions
+- Revert to previous version
+- See edit history
+
+---
+
+## Best Practices
+
+### Performance
+
+<AccordionGroup>
+  <Accordion title="Use List Nodes for Batch">
+    Process multiple items in parallel rather than running the workflow multiple times. List nodes are more efficient and cost-effective.
+  </Accordion>
+
+  <Accordion title="Test Before Scaling">
+    Run workflows on 1–3 items before processing 100. Verify outputs match expectations before committing credits to large batches.
+  </Accordion>
+
+  <Accordion title="Choose the Right Models">
+    Don't overpay for quality you don't need. Flux 2 Pro is excellent but costs more credits. Recraft V3 is cheaper and great for many use cases.
+  </Accordion>
+
+  <Accordion title="Cache Intermediate Results">
+    If a workflow fails mid-way, cached results let you resume from the last successful node instead of starting over.
+  </Accordion>
+</AccordionGroup>
+
+### Organization
+
+<AccordionGroup>
+  <Accordion title="Name Workflows Clearly">
+    Use descriptive names like "Product Photo to 4K Video" instead of "Workflow_v2_final."
+  </Accordion>
+
+  <Accordion title="Group Related Workflows">
+    Organize workspaces into folders: Product Photography, Social Content, Video Ads, etc.
+  </Accordion>
+
+  <Accordion title="Add Descriptions">
+    Document what the workflow does, expected inputs, and typical outputs. Your future self will thank you.
+  </Accordion>
+
+  <Accordion title="Use Tags">
+    Tag workflows by type, client, or project for easier discovery.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Troubleshooting
+
+### Common Issues
+
+<AccordionGroup>
+  <Accordion title="Workflow fails to start">
+    - Check all required fields (marked with *) are filled
+    - Verify inputs are properly connected
+    - Ensure sufficient credits are available
+    - Check for circular dependencies in logic nodes
+  </Accordion>
+
+  <Accordion title="Results don't match expectations">
+    - Review prompt quality — specific prompts yield better results
+    - Check model settings — quality tier affects output
+    - Verify input data quality — AI outputs depend on input quality
+    - Test individual nodes to isolate the issue
+  </Accordion>
+
+  <Accordion title="Slow execution">
+    - Video generation takes 2–5 minutes per clip
+    - Batch processes scale linearly with item count
+    - Some models are slower than others (noted in model selectors)
+    - Check if running in parallel or sequence
+  </Accordion>
+
+  <Accordion title="Credits deducted but no output">
+    - Check the execution log for error messages
+    - Some processing failures still consume credits (AI provider costs)
+    - Contact support with your run ID for credit review
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Dark Factory" icon="factory" href="/dark-factory">
+    Pre-built pipelines for product content
+  </Card>
+  <Card title="Node System" icon="diagram-project" href="/node-system">
+    Build custom workflows with 36 nodes
+  </Card>
+  <Card title="Quick Start" icon="rocket" href="/quickstart">
+    Create your first workflow
+  </Card>
+  <Card title="Plans & Pricing" icon="credit-card" href="/plans-overview">
+    Credit allocations by tier
+  </Card>
+</CardGroup>
